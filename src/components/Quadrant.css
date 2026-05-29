@@ -1,0 +1,109 @@
+/* =============================================
+   QUADRANT CARD
+   ============================================= */
+.quadrant-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  position: relative;
+  background: rgba(13, 25, 41, 0.4);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-glass);
+}
+
+.quadrant-card.q1 { border-left: 3px solid var(--q1-accent); }
+.quadrant-card.q2 { border-left: 3px solid var(--q2-accent); }
+.quadrant-card.q3 { border-left: 3px solid var(--q3-accent); }
+.quadrant-card.q4 { border-left: 3px solid var(--q4-accent); }
+
+/* Drag-Over States — glowing border */
+.quadrant-card.drag-over {
+  background: rgba(20, 35, 55, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.quadrant-card.q1.drag-over { box-shadow: inset 0 0 0 1px var(--q1-accent), 0 0 25px var(--q1-glow); }
+.quadrant-card.q2.drag-over { box-shadow: inset 0 0 0 1px var(--q2-accent), 0 0 25px var(--q2-glow); }
+.quadrant-card.q3.drag-over { box-shadow: inset 0 0 0 1px var(--q3-accent), 0 0 25px var(--q3-glow); }
+.quadrant-card.q4.drag-over { box-shadow: inset 0 0 0 1px var(--q4-accent), 0 0 15px var(--q4-glow); }
+
+/* Header */
+.quadrant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.quadrant-info { display: flex; flex-direction: column; gap: 4px; }
+
+.quadrant-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.q1 .quadrant-tag { color: var(--q1-accent); }
+.q2 .quadrant-tag { color: var(--q2-accent); }
+.q3 .quadrant-tag { color: var(--q3-accent); }
+.q4 .quadrant-tag { color: var(--q4-accent); }
+
+.quadrant-header h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.quadrant-icon { color: var(--text-secondary); opacity: 0.5; }
+
+/* Task List */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+  margin-bottom: 14px;
+  min-height: 60px;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.drag-over .empty-state { opacity: 1; }
+
+/* Add Task button */
+.add-task-quadrant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 9px;
+  border: 1px dashed rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+.add-task-quadrant-btn:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+}

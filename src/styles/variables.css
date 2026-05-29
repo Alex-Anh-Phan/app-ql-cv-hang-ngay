@@ -1,0 +1,61 @@
+:root {
+  /* Main Theme Colors */
+  --bg-main: #08121f;
+  --bg-sidebar: #03070d;
+  --bg-glass-surface: rgba(13, 25, 41, 0.6);
+  --bg-glass-hover: rgba(20, 35, 55, 0.8);
+  --border-glass: rgba(255, 255, 255, 0.05);
+  --border-glass-glow: rgba(255, 255, 255, 0.1);
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #72849a;
+  --text-dark: #03070d;
+
+  /* Accent Button (Cyan) */
+  --accent-cyan: #74ebfe;
+  --accent-cyan-hover: #4fd6eb;
+  --accent-cyan-glow: rgba(116, 235, 254, 0.3);
+
+  /* Eisenhower Quadrants Accents */
+  /* Q1: Do Immediately (Urgent & Important) - Red */
+  --q1-accent: #ff4d4d;
+  --q1-bg: rgba(255, 77, 77, 0.05);
+  --q1-glow: rgba(255, 77, 77, 0.25);
+
+  /* Q2: Schedule & Plan (Important - Not Urgent) - Yellow */
+  --q2-accent: #ffb41d;
+  --q2-bg: rgba(255, 180, 29, 0.05);
+  --q2-glow: rgba(255, 180, 29, 0.25);
+
+  /* Q3: Delegate Tasks (Urgent - Not Important) - Blue */
+  --q3-accent: #26beff;
+  --q3-bg: rgba(38, 190, 255, 0.05);
+  --q3-glow: rgba(38, 190, 255, 0.25);
+
+  /* Q4: Eliminate & Drop (Not Urgent - Not Important) - Slate */
+  --q4-accent: #516277;
+  --q4-bg: rgba(81, 98, 119, 0.05);
+  --q4-glow: rgba(81, 98, 119, 0.25);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Shadow / Glow */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(16px);
+}

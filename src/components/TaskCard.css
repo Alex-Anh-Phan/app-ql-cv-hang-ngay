@@ -1,0 +1,132 @@
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.task-card:hover .task-drag-handle {
+  opacity: 1;
+}
+
+.task-card:hover .task-delete-btn {
+  opacity: 1;
+}
+
+.task-card.dragging {
+  opacity: 0.4;
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.task-card.overdue-card {
+  border-color: rgba(255, 77, 77, 0.15);
+}
+
+/* Drag Handle */
+.task-drag-handle {
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+  cursor: grab;
+}
+
+/* Checkbox */
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--text-secondary);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  margin-top: 1px;
+  transition: all 0.15s ease;
+  color: transparent;
+}
+
+.task-checkbox:hover { opacity: 0.8; transform: scale(1.1); }
+
+.q1-check { border-color: var(--q1-accent); }
+.q1-check.checked { background: var(--q1-accent); color: #000; }
+.q2-check { border-color: var(--q2-accent); }
+.q2-check.checked { background: var(--q2-accent); color: #000; }
+.q3-check { border-color: var(--q3-accent); }
+.q3-check.checked { background: var(--q3-accent); color: #000; }
+.q4-check { border-color: var(--q4-accent); }
+.q4-check.checked { background: var(--q4-accent); color: #fff; }
+
+/* Task Content */
+.task-content { flex: 1; min-width: 0; }
+
+.task-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--text-primary);
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.task-title.completed-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+/* Meta row */
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.badge-overdue  { background: rgba(255,77,77,0.12);  color: var(--q1-accent); border: 1px solid rgba(255,77,77,0.25); }
+.badge-plan     { background: rgba(255,180,29,0.12); color: var(--q2-accent); border: 1px solid rgba(255,180,29,0.25); }
+.badge-draft    { background: rgba(255,180,29,0.08); color: #c89a18; border: 1px solid rgba(255,180,29,0.15); }
+.badge-delegate { background: rgba(38,190,255,0.12); color: var(--q3-accent); border: 1px solid rgba(38,190,255,0.25); }
+.badge-low      { background: rgba(81,98,119,0.15);  color: var(--q4-accent); border: 1px solid rgba(81,98,119,0.25); }
+.badge-ticket   { background: rgba(255,255,255,0.04); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.08); }
+.badge-default  { background: rgba(255,255,255,0.04); color: var(--text-secondary); }
+
+.meta-text, .time-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Delete button */
+.task-delete-btn {
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+  padding: 2px;
+  margin-top: 1px;
+}
+
+.task-delete-btn:hover { color: var(--q1-accent); opacity: 1 !important; }

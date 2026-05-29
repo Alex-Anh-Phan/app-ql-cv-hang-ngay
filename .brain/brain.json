@@ -1,0 +1,10 @@
+{
+  "project": {
+    "name": "app-quan-ly-cong-viec",
+    "description": "Ứng dụng quản lý công việc cá nhân dựa trên Ma trận Eisenhower, giúp phân loại tác vụ theo 4 mức độ (Quan trọng/Khẩn cấp).",
+    "created_at": "2026-05-29T20:22:27+07:00"
+  },
+  "tech_stack": [],
+  "features": [],
+  "decisions": []
+}
